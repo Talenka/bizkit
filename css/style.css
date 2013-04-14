@@ -1,0 +1,200 @@
+html, body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Verdana;
+    background: #eee;
+}
+
+header, section, footer
+{
+    margin: 0 auto;
+    display: block;
+    width: 500px;
+    max-width: 96%;
+    padding: 2%;
+}
+
+a
+{
+    text-decoration: none;
+    color: #000;
+}
+
+header
+{
+    text-align: center;
+    overflow: hidden;
+}
+
+header a
+{
+    text-shadow: 0 0 20px #f0d;
+    font-size: 42px;
+    letter-spacing: 1px;
+    transition: all .5s;
+    -moz-animation: r .2s linear 3;
+    -webkit-animation: r .2s linear 3;
+}
+
+header:hover a
+{
+    letter-spacing: 9px;
+}
+
+sub
+{
+    text-shadow: 0 0 15px #0f0;
+}
+
+sup
+{
+    text-shadow: 0 0 15px #00f;
+}
+
+header em
+{
+    text-shadow: 0 0 15px #f00;
+}
+
+section
+{
+    background: #fff;
+    box-shadow: 0 5px 5px #bbb;
+}
+
+footer
+{
+    color: #444;
+    font-size: 8pt;
+    text-align: justify;
+}
+
+p
+{
+    display: block;
+    text-align: justify;
+}
+
+h1
+{
+    color: #e70;
+    margin: 0 0 9px;
+}
+
+h3
+{
+    color: #0a0;
+    margin: 11px 0 5px;
+}
+
+b
+{
+    border: 1px #aaa solid;
+    padding: 0 5px;
+    margin: 0 1px;
+    font-weight: bold;
+    font-size: smaller;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+.d, .x
+{
+    text-align: center;
+}
+
+.d b
+{
+    font-size: 45px;
+    width: 45px;
+    line-height: 45px;
+    display: inline-block;
+    box-shadow: 5px 5px 5px #bbb;
+    margin: 10px;
+    padding: 3px 5px;
+    -moz-animation: r .1s linear 10;
+    -webkit-animation: r .1s linear 10;
+}
+
+nav
+{
+    display: block;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+}
+
+nav:target
+{
+    max-height: 999px;
+    transition: max-height 1.5s;
+}
+
+.x a
+{
+    min-width: 99px;
+    display: inline-block;
+    margin: 5px 1% 10px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 5px 5px #ddd;
+    transition: all .3s;
+}
+
+.x a:hover
+{
+    box-shadow: 0 5px 5px #bbb;
+}
+
+.v
+{
+    color: #0a0;
+    border: 1px #3b0 solid;
+    background-color: #ef8;
+    background-image: linear-gradient(#ef8, #cd6);
+}
+
+.o
+{
+    color: #e70;
+    border: 1px #c40 solid;
+    background-color: #fd5;
+    background-image: linear-gradient(#fe8, #ec4);
+}
+
+.dr
+{
+    float: right;
+}
+
+input
+{
+    width: 96%;
+    font-size: 23px;
+    margin: 5px 0;
+}
+
+@-moz-keyframes r
+{
+    from
+    {
+        -moz-transform: rotate(0);
+    }
+    to
+    {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes r
+{
+    from
+    {
+        -webkit-transform: rotate(0);
+    }
+    to
+    {
+        -webkit-transform: rotate(360deg);
+    }
+}
