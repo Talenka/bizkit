@@ -1,0 +1,24 @@
+# Images
+*.ico
+*.jpg
+*.png
+*.svg
+
+# SublimeText files
+*.sublime-*
+
+# Documentation (since it is available online)
+doc/
+
+# Hidden files
+.DS_Store
+.htaccess
+
+# RSS/Atom Feeds
+*.xml
+
+# Google webmaster file
+google*
+
+# Data (not public)
+data/
