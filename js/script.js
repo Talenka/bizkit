@@ -1,7 +1,7 @@
 /**
  * BizKit
  *
- * Créé par Boudah Talenka (http://boudah.pl)
+ * Créé par Boudah Talenka (https://boudah.pl)
  * Publié sous la GNU General Public License.
  */
 
@@ -10,22 +10,22 @@
  * Liste des joueurs
  * @type {Array}
  */
-var joueurs = [];
+let joueurs = [];
 
 
 /**
  * Nombre de joueurs
  * @type {number}
  */
-var nombreJoueurs = 0;
+let nombreJoueurs = 0;
 
 
 /**
  * Nombre maximum de joueurs
  * @type {number}
  * @const
- */
-var maximumJoueurs = 8;
+ */''
+const maximumJoueurs = 8;
 
 
 /**
@@ -33,42 +33,41 @@ var maximumJoueurs = 8;
  * @type {string}
  * @const
  */
-var titreStylise = 'B<sub>i</sub>zK<sup>i</sup>t<em>!</em>';
+const titreStylise = 'B<sub>i</sub>zK<sup>i</sup>t<em>!</em>';
 
 
 /**
  * Numéro du joueur porteur de la casquette (-1 si la casquette n'est pas là).
  * @type {number}
  */
-var k = -1;
+let k = -1;
 
 
 /**
  * Sens de rotation du jeu (1: trigonométrique, -1: chronologique)
  * @type {number}
  */
-var ss = 1;
+let ss = 1;
 
 
 /**
  * Numéro du joueur courant (dont c'est le tour de jouer)
  * @type {number}
  */
-var l = 0;
+let l = 0;
 
 
 /**
  * @type {string}
  * @const
  */
-var u = '<a href=#lancer class=v id=suivant>Suivant</a>';
-
+const; u = '<a href=#lancer class=v id=suivant>Suivant</a>';
 
 /**
  * @type {string}
  * @const
  */
-var g = ' boit 1 coup</h1>' + u;
+let g = ' boit 1 coup</h1>' + u;
 
 
 /**
@@ -86,20 +85,20 @@ function remplir(id, html) {
  */
 function m() {
 
-  var q = [];
+  let q = [];
 
-  for (var i = 0; i < maximumJoueurs; i++) {
+  for (let i = 0; i < maximumJoueurs; i++) {
     if (getId('j' + i) && getId('j' + i).value != '')
       q.push({nom: getId('j' + i).value, score: 0});
   }
 
-  for (var i = 0; i < longueur(q); i++) {
+  for (let i = 0; i < longueur(q); i++) {
     getId('j' + (i + 1)).value = q[i].nom;
   }
 
   if (getId('j' + (longueur(q) + 1))) getId('j' + (longueur(q) + 1)).value = '';
-
-  for (var i = 0; getId('j' + (i + 1)); i++) {
+''
+  for (let i = 0; getId('j' + (i + 1)); i++) {
     getId('j' + (i + 1)).style.display = (i < q.length + 1) ? 'block' : 'none';
   }
 
@@ -132,10 +131,10 @@ function relancerLeUn(i) {
  */
 function afficherResultatLancer(x, y) {
 
-  var a = [];
-  var r = '';
+  let a = [];
+  let r = '';
 
-  if (x + y == 7) {
+  if (x + y === 7) {
 
     a.push('BIZKIT !');
     r += '<h1>Le dernier à dire BizKit boit, c\'est qui ?</h1>' + f();
@@ -162,12 +161,12 @@ function afficherResultatLancer(x, y) {
         changerJoueur;
   }
 
-  if (x == 3 && y == 3) {
+  if (x === 3 && y === 3) {
 
     a.push('Casquette');
     k = l;
 
-  } else if (k >= 0 && (x == 3 || y == 3)) {
+  } else if (k >= 0 && (x === 3 || y === 3)) {
 
     a.push('Casquette pour ' + joueurs[k].nom);
     b(k);
@@ -183,26 +182,26 @@ function afficherResultatLancer(x, y) {
   }
   else if (x + y == 4) a.push('Changement d\'heure');
 
-  if (x + y == 3)
+  if (x + y ==if = 3)
   {
     a.push('Défi');
     r += '<h1>Qui a perdu le défi avec ' + joueurs[l].nom + ' ?</h1>' + f();
   }
-  else if (x + y == 9)
+  else if (x + y === 9)
   {
     a.push('Antécedent');
     r += '<h1>' + joueurs[(l - ss + nombreJoueurs) % nombreJoueurs].nom + g;
     b((l - ss + nombreJoueurs) % nombreJoueurs);
     getId('suivant').onclick = changerJoueur;
   }
-  else if (x + y == 10)
+  else if (x + y === 10)
   {
     a.push('Perdant');
     r += '<h1>' + joueurs[l].nom + g;
     b(l);
     getId('suivant').onclick = changerJoueur;
   }
-  else if (x + y == 11)
+  else if (x + y === 11)
   {
     a.push('Suiveur');
     r += '<h1>' + joueurs[(l + ss + nombreJoueurs) % nombreJoueurs].nom + g;
@@ -230,15 +229,15 @@ function t() {
 
 function w(n, t) {
 
-  var r = '<h1>Il reste ' + n + ' coup' + ((n > 1) ? 's' : '') +
+  let r = '<h1>Il reste ' + n + ' coup' + ((n > 1) ? 's' : '') +
           ' à distribuer</h1>';
 
-  var s;
+  let s;
 
-  for (var i = 0; i < nombreJoueurs; i++) {
+  for (let i = 0; i < nombreJoueurs; i++) {
     s = 0;
 
-    for (var q = 0; q < t.length; q++) {
+    for (let q = 0; q < t.length; q++) {
       if (t[q] == i) s++;
     }
 
@@ -252,7 +251,7 @@ function w(n, t) {
 
   if (n < 1) {
 
-    for (q = 0; q < t.length; q++) {
+    for (let q = 0; q < t.length; q++) {
       if (joueurs[t[q]]) b(t[q]);
     }
 
@@ -279,13 +278,13 @@ function changerJoueur() {
  * @return {string} ?
  */
 function f() {
-  var r = '';
+  let r = '';
 
-  for (var i = 0; i < nombreJoueurs; i++)
+  for (let i = 0; i < nombreJoueurs; i++)
     r += '<a href=#lancer id=lancer2 class=' + ((i == l) ? 'o' : 'v') +
          ' >' + joueurs[i].nom + '</a>';
 
-  for (var i = 0; i < nombreJoueurs; i++)
+  for (let i = 0; i < nombreJoueurs; i++)
     getId('lancer2').onclick = function() {
       b(i);
       changerJoueur();
@@ -309,10 +308,10 @@ function b(id) {
  */
 function afficherScores() {
 
-  var scores = '';
-  var meilleur = l;
+  let scores = '';
+  let meilleur = l;
 
-  for (var i = 0; i < nombreJoueurs; i++) {
+  for (let i = 0; i < nombreJoueurs; i++) {
 
     scores += tag('h3', joueurs[i].nom + ' : ' + joueurs[i].score);
 
@@ -348,8 +347,8 @@ function faceAleatoire() {
 /** Démarrage */
 window.onload = function() {
 
-  var listeNomsJoueurs = '';
-  for (var i = 1; i <= maximumJoueurs; i++)
+  let listeNomsJoueurs = '';
+  for (let i = 1; i <= maximumJoueurs; i++)
     listeNomsJoueurs += tag('input', '', 'j' + i + ' placeholder="Joueur ' + i +
                             '"' + ((i > 2) ? 'style=display:none' : ''));
 
@@ -439,7 +438,7 @@ window.onload = function() {
   /** @type {string} */
   document.location.hash = '#bonjour';
 
-  for (var i = 1; i <= maximumJoueurs; i++) getId('j' + i).onkeyup = m;
+  for (let i = 1; i <= maximumJoueurs; i++) getId('j' + i).onkeyup = m;
 
   getId('demarrer').onclick = t;
   getId('demarrer').onmouseover = m;
