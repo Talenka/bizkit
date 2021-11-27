@@ -1,8 +1,8 @@
 /**
  * BizKit
  *
- * Créé par Boudah Talenka (https://boudah.pl)
- * Publié sous la GNU General Public License.
+ * @author Boudah Talenka <i@boudah.pl>
+ * @license GNU General Public License.
  */
 
 
